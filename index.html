@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>AITHIENTRAN</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Canvas hiệu ứng -->
+<canvas id="fx-canvas"></canvas>
+
+<!-- Header -->
+<header id="app-header">
+  <div id="header-glow"></div>
+  <div id="ai-logo">
+    <div id="ai-orb">
+      <div class="orb-core"></div>
+      <div class="orb-ring r1"></div>
+      <div class="orb-ring r2"></div>
+      <div class="orb-ring r3"></div>
+    </div>
+    <div id="ai-name">
+      <span class="name-main">AITHIENTRAN</span>
+      <span class="name-sub">AI · Làm hết · Nói thẳng</span>
+    </div>
+  </div>
+  <div id="status-bar">
+    <span class="status-dot"></span>
+    <span id="status-text">Online</span>
+  </div>
+</header>
+
+<!-- Chat area -->
+<main id="chat-area">
+  <div id="chat-messages">
+    <!-- welcome message injected by JS -->
+  </div>
+</main>
+
+<!-- Input -->
+<footer id="input-area">
+  <div id="input-wrap">
+    <textarea
+      id="user-input"
+      placeholder="Nhắn gì đi..."
+      rows="1"
+      autocomplete="off"
+      spellcheck="false"
+    ></textarea>
+    <button id="send-btn" aria-label="Gửi">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="22" y1="2" x2="11" y2="13"></line>
+        <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+      </svg>
+    </button>
+  </div>
+  <div id="quick-btns">
+    <button class="q-btn" data-q="Mày làm được gì?">🤔 Làm được gì?</button>
+    <button class="q-btn" data-q="Kể 1 câu chuyện cười tục tiểu đi">😂 Chuyện cười tục</button>
+    <button class="q-btn" data-q="Viết code Python hello world">💻 Code Python</button>
+    <button class="q-btn" data-q="Chửi thề 1 cái xem nào">🤬 Chửi thề</button>
+  </div>
+</footer>
+
+<script src="ai.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
